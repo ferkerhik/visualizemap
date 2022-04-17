@@ -35,8 +35,8 @@ namespace visualizemap.Pages
         }
         public void database()
         {
-            string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";   //DB Chan
-            //string CS = "Data Source=LAPTOP-QG030MKA;Initial Catalog=SpatialDB3;Integrated Security=True";            //DB Pond
+            //string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";   //DB Chan
+            string CS = "Data Source=LAPTOP-QG030MKA;Initial Catalog=SpatialDB3;Integrated Security=True";            //DB Pond
             SqlConnection con = new SqlConnection(CS);
             string command = "select city,country,latitude,longitude,Year from AirPollutionPM25 where country in (select top 1 country from AirPollutionPM25 group by country order by count(country) desc)";
 
