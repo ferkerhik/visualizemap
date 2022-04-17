@@ -8,17 +8,20 @@ using System.Threading.Tasks;
 
 namespace visualizemap.Pages
 {
-    public class PrivacyModel : PageModel
+    public class _5bModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<_5bModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public _5bModel(ILogger<_5bModel> logger)
         {
             _logger = logger;
         }
 
         public void OnGet()
         {
+
         }
     }
+
+
 }
