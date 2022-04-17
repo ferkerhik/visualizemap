@@ -3,6 +3,16 @@
 @{
 }
 
+<form method="post">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Enter Year (2008 - 2017)</label>
+        <input type="text" class="form-control" name="year">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div>
+    @Model.year
+</div>
 @section mapsection{
 
     <!DOCTYPE html>
