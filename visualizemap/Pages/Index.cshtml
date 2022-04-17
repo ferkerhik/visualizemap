@@ -56,16 +56,17 @@
         });
         const graphicsLayer = new GraphicsLayer();
             map.add(graphicsLayer);
+            for (let i = 0; i < indexdata.length; i++) {
             const simpleMarkerSymbol = {
                 type: "simple-marker",
-                color: [226, 119, 40],  // Orange
+                color: indexdata[i].color_pm25,  // Orange
                 outline: {
                     color: [255, 255, 255], // White
                     width: 1
                 },
                 size: '10px'
             };
-            for (let i = 0; i < indexdata.length; i++) {
+           
                 const point = { //Create a point
                     type: "point",
                     longitude: indexdata[i].longitude,

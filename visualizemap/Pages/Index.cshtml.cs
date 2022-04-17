@@ -36,7 +36,7 @@ namespace visualizemap.Pages
         {
             string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";
             SqlConnection con = new SqlConnection(CS);
-            string command = "select latitude,longitude from AirPolluTionPM25 where year = '"+year+"'";
+            string command = "select latitude,longitude,color_pm25 from AirPolluTionPM25 where year = '"+year+"'";
 
             SqlDataAdapter da = new SqlDataAdapter(command, con);
             DataTable dt = new DataTable();
