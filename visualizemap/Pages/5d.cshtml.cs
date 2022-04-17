@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace visualizemap.Pages
 {
-    public class mapviewModel : PageModel
+    public class _5dModel : PageModel
     {
         public void OnGet()
         {

@@ -34,9 +34,11 @@ namespace visualizemap.Pages
         }
         public void database()
         {
-            string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";
+            string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";   //DB Chan
+            //string CS = "Data Source=LAPTOP-QG030MKA;Initial Catalog=SpatialDB3;Integrated Security=True";            //DB Pond
             SqlConnection con = new SqlConnection(CS);
-            string command = "select latitude,longitude,color_pm25 from AirPolluTionPM25 where year = '"+year+"'";
+            //string command = "select latitude,longitude,color_pm25 from AirPolluTionPM25 where year = '"+year+"'";
+            string command = "select latitude,longitude,color_pm25 from AirPolluTionPM25";
 
             SqlDataAdapter da = new SqlDataAdapter(command, con);
             DataTable dt = new DataTable();
