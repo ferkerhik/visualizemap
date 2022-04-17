@@ -35,8 +35,8 @@ namespace visualizemap.Pages
         }
         public void database()
         {
-            string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";   //DB Chan
-            //string CS = "Data Source=LAPTOP-QG030MKA;Initial Catalog=SpatialDB3;Integrated Security=True";            //DB Pond
+            //string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";   //DB Chan
+            string CS = "Data Source=LAPTOP-QG030MKA;Initial Catalog=SpatialDB3;Integrated Security=True";            //DB Pond
             SqlConnection con = new SqlConnection(CS);
             string command = "declare @bk geometry select @bk = Geom from AirPollutionPM25 where city = 'Bangkok' select distinct top 50 city, country, latitude, longitude, Geom.MakeValid().STDistance(@bk) dist from AirPollutionPM25 where city != 'Bangkok' order by dist asc";
 

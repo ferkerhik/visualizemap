@@ -35,8 +35,8 @@ namespace visualizemap.Pages
         }
         public void database()
         {
-            string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";   //DB Chan
-            //string CS = "Data Source=LAPTOP-QG030MKA;Initial Catalog=SpatialDB3;Integrated Security=True";            //DB Pond
+            //string CS = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";   //DB Chan
+            string CS = "Data Source=LAPTOP-QG030MKA;Initial Catalog=SpatialDB3;Integrated Security=True";            //DB Pond
             SqlConnection con = new SqlConnection(CS);
             string command = "declare @AroundThailand geometry = 'POLYGON EMPTY' select @AroundThailand = @AroundThailand.STUnion(Geom.MakeValid()) from world where NAME = 'Thailand' select city, country, latitude, longitude from AirPollutionPM25 where country in(select Name from world where Geom.MakeValid().STTouches(@AroundThailand) = 1) and Year = 2018";
 
