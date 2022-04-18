@@ -17,7 +17,8 @@ namespace visualizemap.Pages
 {
     public class sql_queryModel : PageModel
     {
-        private string _cs = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True";
+        private string _cs = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True"; // DB Chan
+        //private string _cs = "Data Source=LAPTOP-H78D00F6\\MSSQLSERVER144;Initial Catalog=SpatialDB3;Integrated Security=True"; // DB Pond
 
         public string table;
         private DataTable _dt;
