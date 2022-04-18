@@ -95,7 +95,7 @@ namespace visualizemap.Pages
                     {
                         cmd.Connection = con;
                         sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
+                        using (DataTable dt = new DataTable("query"))
                         {
                             sda.Fill(dt);
                             return dt;
@@ -115,7 +115,7 @@ namespace visualizemap.Pages
                     {
                         cmd.Connection = con;
                         sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
+                        using (DataTable dt = new DataTable("query"))
                         {
                             sda.Fill(dt);
                             return dt;
@@ -135,7 +135,7 @@ namespace visualizemap.Pages
                     {
                         cmd.Connection = con;
                         sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
+                        using (DataTable dt = new DataTable("query"))
                         {
                             sda.Fill(dt);
                             return dt;
@@ -155,7 +155,7 @@ namespace visualizemap.Pages
                     {
                         cmd.Connection = con;
                         sda.SelectCommand = cmd;
-                        using (DataTable dt = new DataTable())
+                        using (DataTable dt = new DataTable("query"))
                         {
                             sda.Fill(dt);
                             return dt;
